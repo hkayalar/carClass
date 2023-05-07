@@ -1,2 +1,4 @@
-package org.example;public class Dealership {
+package org.example;
+
+public class Dealership {
 }
