@@ -22,8 +22,7 @@ public class Main {
         double newPriceTwo = dodge.getPrice()*3/2;
         dodge.setPrice(newPriceTwo);
 
-        System.out.println("This " + nissan.getMake() + " worth " + nissan.getPrice() + ". It was built in " + nissan.getYear() + " and the color of the car is " + nissan.getColor() + ".");
-        System.out.println("This " + dodge.getMake() + " worth " + dodge.getPrice() + ". It was built in " + dodge.getYear() + " and the color of the car is " + dodge.getColor() + ".");
+        nissan.drive();
 
     }
 }
