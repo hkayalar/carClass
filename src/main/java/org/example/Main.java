@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,20 +11,19 @@ public class Main {
         not copying the source it is copying the reference. Instead of this we can create the second
         object from beginning. OR we can use copy constructors. */
 
-        Car nissan = new Car("Nissan", 5000, 2020, "red");
-        Car dodge = new Car("Dodge", 11000, 2018, "blue");
-        Car nissan2 = new Car(nissan); //calling the copy constructor
+        Car[] cars = new Car[]{
+                new Car("Nissan", 5000, 2020, "red", new String[]{"tires", "keys"}),
+                new Car("Dodge", 11000, 2018, "blue", new String[]{"tires", "keys"}),
+                new Car("Nissan", 5000, 2020, "yellow", new String[]{"tires", "filter"}),
+        };
 
-        nissan.setColor("Jet Black");
-        dodge.setColor("Jet Black");
 
-        double newPrice = nissan.getPrice() / 2;
-        nissan.setPrice(newPrice);
+        Dealership dealership = new Dealership();
 
-        double newPriceTwo = dodge.getPrice()*3/2;
-        dodge.setPrice(newPriceTwo);
+        for (int i = 0; i < cars.length; i++) {
+            dealership.setCar(cars[i], i);
+        }
 
-        nissan.drive();
-
+        System.out.println(dealership.getCar(0));
     }
 }
