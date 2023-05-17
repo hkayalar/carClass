@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.Arrays;
-
 public class Dealership {
     private Car[] cars;
 
@@ -17,5 +15,6 @@ public class Dealership {
     //getters
     public Car getCar(int index){
         return new Car(this.cars[index]);
+        
     }
 }
