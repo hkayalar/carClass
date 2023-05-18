@@ -11,8 +11,8 @@ public class Main {
 
         Car[] cars = new Car[]{
                 new Car("Nissan", 5000, 2020, "red", new String[]{"tires", "keys"}),
-                new Car("Dodge", 11000, 2018, "blue", new String[]{"tires", "keys"}),
-                new Car("Nissan", 5000, 2020, "yellow", new String[]{"tires", "filter"}),
+                new Car("Dodge", 1000, 2018, "blue", new String[]{"tires", "keys"}),
+                new Car("Nissan", 5000, 2017, "yellow", new String[]{"tires", "filter"}),
         };
 
 
@@ -21,7 +21,5 @@ public class Main {
         for (int i = 0; i < cars.length; i++) {
             dealership.setCar(cars[i], i);
         }
-
-        System.out.println(dealership.getCar(0));
     }
 }

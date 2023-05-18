@@ -75,12 +75,12 @@ public class Car {
     }
 
     public String toString() {
-        return    "Make: " + this.make + ".\n"
-                + "Price: " + this.price + ".\n"
+        return "Make: " + this.make + ".\n"
+                + "Price: " + this.price + "\n"
                 + "Year: " + this.year + ".\n"
                 + "Color: " + this.color + ".\n"
                 + "Parts: " + Arrays.toString(parts) + ".\n";
-    }
+     }
 
 
 }
