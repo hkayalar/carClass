@@ -4,8 +4,11 @@ public class Dealership {
     private Car[] cars;
 
     //constructor
-    public Dealership() {
-        this.cars= new Car[3];
+    public Dealership(Car[] cars) {
+        this.cars= new Car[cars.length];
+        for (int i = 0; i < cars.length; i++) {
+            this.cars[i] = new Car(cars[i]);
+        }
     }
 
     //setters
@@ -23,16 +26,19 @@ public class Dealership {
         this.cars[index] = null;
     }
 
-    String search(String make, int budget) {
+    public int search(String make, int budget) {
         for (int i = 0; i < this.cars.length; i++) {
             if (this.cars[i] == null){
                 continue;
             }
-            else if(this.cars[i].getMake().equals(make) && this.cars[i].getPrice() <= budget){
-                return "Great, We have the car for you in spot "+ i + "\n" + this.cars[i].toString() + "\nAre you interested?";
+            else if(this.cars[i].getMake().equalsIgnoreCase(make) && this.cars[i].getPrice() <= budget){
+                System.out.println("Great, We have the car for you in spot "+ i + "\n" + cars[i].toString() + "\nAre you interested?");
+                System.out.println("If you are interested, type 'yes'");
+                return i;
             }
-        }
-        return "Sorry, we could not find any cars for you.";
+         }
+         System.out.println("\n We are unable to provide you a car.");
+        return 404;
     }
 
     public String toString() {
