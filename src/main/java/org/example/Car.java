@@ -2,9 +2,9 @@ package org.example;
 import java.util.Arrays;
 public class Car {
     private String make;
+    private String color;
     private double price;
     private int year;
-    private String color;
     private String[] parts;
 
     // we only use "this" when we have conflicted parameters and fields.
